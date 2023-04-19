@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: rgb(236, 236, 236);
+  position: relative;
+}
+
+section{
+  display: flex;
+  align-items: center;
+  padding-block: 6rem;
+  width: 100%;
+  min-height: 100vh ;
+  position: relative;
+   overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding:2rem;
+  gap: 2rem;
+}
+
+.col {
+  max-width: 26%;
+}
+
+.item {
+  position: relative;
+  height: 400px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.107);
+  background-color: rgb(255, 255, 255);
+}
+
+#circle1 {
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgb(0, 89, 255);
+}
+
+#circle2 {
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgb(0, 89, 255);
+}
+
+.numbers{
+  font-size: 1.7rem;
+  color: rgb(98, 98, 98);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: -25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transform: translateX(-50%);
+  box-shadow: 0 0 15px 3px rgba(185, 185, 185, 0.107);
+  background-color: rgb(255, 255, 255);
+}
+
+.item-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-icon{
+  color: rgb(0, 89, 255);
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.item h4{
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.item p{
+  line-height: 1.5rem;
+  color: rgb(78, 78, 78);
+  text-align: center;
+}
+
+
+@media (max-width:1100px) {
+  .row{
+    flex-wrap: wrap;
+  }
+  .col{
+    max-width: 35%;
+  }
+}
+
+
+@media (max-width:900px) {
+  .row{
+    flex-wrap: wrap;
+  }
+  .col{
+    max-width: 50%;
+  }
+}
+
+@media (max-width:700px) {
+  #circle1{
+    display: none;
+  }
+  #circle2{
+    display: none;
+  }
+  section{
+    padding-block: 10rem;
+  }
+  .row{
+    flex-wrap: wrap;
+  }
+  .col{
+    max-width: 70%;
+  }
+}
+
+@media (max-width:500px) {
+  .col{
+    max-width: 80%;
+  }
+}
